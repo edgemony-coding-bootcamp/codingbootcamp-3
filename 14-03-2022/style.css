@@ -1,0 +1,15 @@
+.last {
+  display: none;
+}
+
+.change {
+  color: red;
+}
+
+.change .last {
+  display: block;
+}
+
+.change .first {
+  display: none;
+}

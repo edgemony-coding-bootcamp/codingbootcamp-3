@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempio</title>
+  </head>
+  <body>
+    <h1></h1>
+    <button>Cambia il titolo</button>
+  </body>
+
+  <script>
+    const titles = [
+      "Bella raga tutto rego",
+      "Secondo titolo",
+      "E il gran finale",
+      "un insospettabile quarto elemento",
+    ];
+
+    let index = 0;
+
+    const h1 = document.querySelector("h1");
+    h1.innerHTML = titles[index];
+
+    document.querySelector("button").addEventListener("click", () => {
+      if (index === titles.length - 1) {
+        index = 0;
+      } else {
+        index = index + 1;
+      }
+      h1.innerHTML = titles[index];
+    });
+  </script>
+</html>
