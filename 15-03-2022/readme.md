@@ -5,3 +5,7 @@
 - `index.html`
 - `index.js`
 - `addvat.js`
+
+### Flusso di argomenti e return in una funzione
+
+![./_docs/args_flow.png](./_docs/args_flow.png)
