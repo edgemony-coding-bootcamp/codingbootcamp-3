@@ -7,7 +7,7 @@
 
 ### Esercizio
 
-1. Dato un array di citazio`ni, tramite un pulsante verrà visualizzata una citazione casuale per volta
+1. Dato un array di citazioni, tramite un pulsante verrà visualizzata una citazione casuale per volta
 
 ```javascript
 const quotes = [

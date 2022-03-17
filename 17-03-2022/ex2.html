@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2: Commenti</title>
+  </head>
+  <body>
+    <h3>Commenta l'articolo o il video:</h3>
+    <textarea id="input"></textarea>
+    <button id="submit">Aggiungi commento</button>
+    <ul id="comments"></ul>
+
+    <script>
+      const input = document.querySelector("#input");
+      const submit = document.querySelector("#submit");
+      const commentsList = document.querySelector("#comments");
+
+      const comments = [];
+      const avatar = "https://randomuser.me/api/portraits/women/31.jpg";
+
+      const renderComments = () => {
+        commentsList.innerHTML = comments
+          .map(
+            (comment) => `<li>
+              <h4>Utente anonimo (vigliacco)</h4>
+              <img src="${avatar}" />
+              <p>${comment}</p>
+            </li>`
+          )
+          .join("");
+      };
+
+      submit.addEventListener("click", () => {
+        comments.push(input.value);
+        input.value = "";
+        renderComments();
+      });
+
+      renderComments();
+    </script>
+  </body>
+</html>

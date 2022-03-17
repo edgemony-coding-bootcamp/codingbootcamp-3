@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1: Citazioni</title>
+  </head>
+  <body>
+    <h1>Random Star Wars quote</h1>
+    <blockquote></blockquote>
+    <button>Another one!</button>
+
+    <script>
+      const quote = document.querySelector("blockquote");
+      const button = document.querySelector("button");
+
+      const data = [
+        "Io sono tuo padre!",
+        "guerra nessuno fatto grande",
+        "fare o non fare... non c'è provare",
+        "L'imperatore non condivide affatto le vostre ottimistiche previsioni!",
+        "Sto più in alto di te!",
+        ".... (cit. Darth Maul)",
+        "Eri come un fratello per me! (pianto)",
+      ];
+
+      const render = () => {
+        const random = Math.floor(Math.random() * data.length);
+        quote.innerHTML = data[random];
+      };
+
+      button.addEventListener("click", render);
+
+      render();
+    </script>
+  </body>
+</html>
