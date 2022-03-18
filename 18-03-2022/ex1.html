@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="a sample web app" />
+    <title>Lista filtrabile in JS</title>
+
+    <style>
+      li:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista filtrabile in JS</h1>
+    <label>digita un film da cercare</label>
+    <input type="text" placeholder="es: dune" />
+    <button>Cerca</button>
+    <ul></ul>
+  </body>
+
+  <script>
+    const input = document.querySelector("input");
+    const button = document.querySelector("button");
+    const ul = document.querySelector("ul");
+
+    const movies = [
+      "Deadpool",
+      "Dune",
+      "Grosso guaio a Chinatown",
+      "V per vendetta",
+      "Pulp Fiction",
+      "Signore degli anelli",
+      "Scarface",
+      "Sharknado (1,2,3,4,5 e 6)",
+      "Blade Runner",
+    ];
+
+    const render = (value = "") => {
+      const results = movies.filter((movie) =>
+        movie.toLowerCase().includes(value.toLowerCase())
+      );
+
+      ul.innerHTML = results.map((movie) => `<li>${movie}</li>`).join("");
+    };
+
+    button.addEventListener("click", () => {
+      const value = input.value;
+      render(value);
+    });
+
+    input.addEventListener("keyup", () => {
+      const value = input.value;
+      render(value);
+    });
+
+    render();
+  </script>
+</html>
