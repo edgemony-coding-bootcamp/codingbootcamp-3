@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+li {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btnsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
