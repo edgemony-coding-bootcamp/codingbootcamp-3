@@ -16,7 +16,7 @@ Dato il seguente array:
 const people = [
   "Luke Skywalker - Star Wars",
   "Jack Burton - Grosso guaio a Chinatown",
-  "Jhonny Silverhad - Cyberpunk 2077",
+  "Jhonny Silverhand - Cyberpunk 2077",
   "Bilbo Baggins - Il signore degli anelli",
   "Rick Sanchez - Rick & Morty",
   "Master Chief - Halo",
