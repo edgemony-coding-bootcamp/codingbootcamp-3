@@ -1,4 +1,4 @@
-import createCard from "./utils.js";
+import { createCard, createModal } from "./utils.js";
 
 const formatMinText = (text) => text.split(" ").slice(0, 6).join(" ") + " ...";
 
@@ -26,7 +26,6 @@ const getMoviesData = async () => {
 };
 
 // Elementi relativi alla modale
-const modalEl = document.querySelector(".modalWrapper");
 const overlayEl = document.querySelector(".overlay");
 
 // Elementi relativi al form
@@ -51,7 +50,17 @@ getMoviesData()
     const cardsEl = document.querySelectorAll(".card");
 
     cardsEl.forEach((movie) => {
+      const { children } = movie;
+
       movie.addEventListener("click", () => {
+        createModal(
+          children[0].src,
+          children[1].textContent,
+          children[2].textContent,
+          children[3].textContent
+        );
+
+        const modalEl = document.querySelector(".modalWrapper");
         modalEl.classList.toggle("showModal");
         overlayEl.classList.toggle("hideOverlay");
       });
@@ -76,6 +85,8 @@ submitInputEl.addEventListener("click", (event) => {
 });
 
 overlayEl.addEventListener("click", () => {
-  modalEl.classList.toggle("showModal");
+  const modalEl = document.querySelector(".modalWrapper");
+
+  document.body.removeChild(modalEl);
   overlayEl.classList.toggle("hideOverlay");
 });
