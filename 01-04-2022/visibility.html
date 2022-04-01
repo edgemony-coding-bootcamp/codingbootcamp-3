@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility</title>
+    <style>
+      ul {
+        /* border: 1px solid gray; */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        margin-top: 0;
+        width: 200px;
+        position: fixed;
+        z-index: 2;
+        transition: all 0.4s ease;
+        height: 0;
+        overflow: hidden;
+      }
+
+      ul.show {
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Visiblity</h1>
+
+    <div class="dropdown">
+      <button>Mostra tendina</button>
+      <ul>
+        <li>uno</li>
+        <li>due</li>
+        <li>tre</li>
+      </ul>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+      voluptas. Quam sunt, dolorum cupiditate reiciendis sint officia. Ad quia
+      pariatur modi fugit ratione praesentium ea qui at deserunt! Magnam,
+      dolorum.
+    </p>
+
+    <script>
+      const q = (s) => document.querySelector(s);
+
+      q("button").addEventListener("click", () => {
+        q("ul").classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+  </head>
+  <body>
+    <h1>LocalStorage</h1>
+
+    <input type="text" />
+    <button>Aggiungi</button>
+    <ul></ul>
+
+    <script>
+      // leggo i dati dal localStorage
+      const localData = localStorage.getItem("todo-data");
+      const data = localData ? JSON.parse(localData) : [];
+      const q = (s) => document.querySelector(s);
+
+      const render = (data) =>
+        (q("ul").innerHTML = data.map((e) => `<li>${e}</li>`).join(""));
+
+      q("button").addEventListener("click", () => {
+        data.push(q("input").value);
+        q("input").value = "";
+
+        const stringedArray = JSON.stringify(data);
+        // Scrivo i dati nel localStorage
+        localStorage.setItem("todo-data", stringedArray);
+
+        render(data);
+      });
+
+      render(data);
+    </script>
+  </body>
+</html>
