@@ -1,3 +1,4 @@
+import { GET } from "../../utils/http";
 import { useState, useEffect } from "react";
 import CardItem from "../CardItem";
 import "./style.css";
@@ -6,9 +7,7 @@ function CardList() {
   const [moviesData, setMoviesData] = useState([]);
 
   useEffect(() => {
-    fetch("https://edgemony-backend.herokuapp.com/movies")
-      .then((res) => res.json())
-      .then((data) => setMoviesData(data));
+    GET().then((data) => setMoviesData(data));
   }, []);
 
   return (

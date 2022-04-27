@@ -1,16 +1,11 @@
 Sulla base della lezione del giorno:
 
-- Creare un file `utils.js`, all'interno della directory `src` che:
-
-  - includa una funzione per il metodo GET per l'indirizzo `https://edgemony-backend.herokuapp.com/movies`
-  - sostituire il fetch al componente `<CardList />` con la nuova funzione creata in `utils`
-
-  - includa una funzione per il metodo POST, per l'aggiunta di nuovi movies all'array
-
-  - includa una funzione per il metodo DELETE, per la rimozione di un determnato movie
-
-  - includa una funzione per il metodo PUT, per modificare un determinato movie
+- Creare una modale al cui click sul pulsante `Send it` (all'interno del componente `<CreateCardForm>`).
+- La stessa deve avvisare l'utente che il movie è stato aggiunto alla lista.
+- Dopo 3 secondi la modale si auto-chiude.
 
 ### Avanzato
 
-Per i metodo POST, DELETE e PUT, provare ad inserire dei movies a piacere. Attenzione: controllare poi la risposta, se alla lista dei movies manca qualche dato o se si rompe qualcosa bisogna ripararlo!!
+Alla Homepage, rendere la parte logica relativa alla `<input>` di ricerca:
+
+- Filtrare la lista dei movies per `Titolo` e per `Categoria`
