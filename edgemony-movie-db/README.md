@@ -1,11 +1,11 @@
 Sulla base della lezione del giorno:
 
-- Creare una modale al cui click sul pulsante `Send it` (all'interno del componente `<CreateCardForm>`).
-- La stessa deve avvisare l'utente che il movie è stato aggiunto alla lista.
-- Dopo 3 secondi la modale si auto-chiude.
+- Rimpizzare tutti gli stili con estensione '.css' con SASS (scss). Attenzione al nome del file e all'import nel componente!
+- Continuare o iniziare l'esercizio avanzato di ieri per chi non l'avesse ancora concluso/iniziato:
+  - Alla Homepage, rendere la parte logica relativa alla `<input>` di ricerca:
+  - Filtrare la lista dei movies per `Titolo` e per `Categoria`
 
 ### Avanzato
 
-Alla Homepage, rendere la parte logica relativa alla `<input>` di ricerca:
-
-- Filtrare la lista dei movies per `Titolo` e per `Categoria`
+- Ogni singola card dovrebbe presentare una 'X', al cui click venga mostrata una modale che richiede all'utente se cancellare dal Database il movie indicato. La modale deve presentare due pulsati, `Conferma` e `Annulla`.
+- Per i più audaci, provare a riutilizzare il componente `<Modal />`, rendendolo riutilizzabile allo scopo.
