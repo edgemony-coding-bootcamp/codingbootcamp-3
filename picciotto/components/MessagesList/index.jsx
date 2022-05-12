@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { GET, DELETE } from "../../utils/api";
 import styles from "./index.module.scss";
 
@@ -26,7 +27,11 @@ const MessagesList = ({ reloadData, setReloadData }) => {
         orderListByTime(messagesList).map((message) => (
           <div className={styles.wrapper__message} key={message.id}>
             <h3>{message.text}</h3>
-            <p>{message.sender}</p>
+            <Link href={`/messages/${message.id}`}>
+              <a>
+                <p>{message.sender}</p>
+              </a>
+            </Link>
             <p>{message.date}</p>
             <button onClick={() => onMessageDelete(message.id)}>x</button>
           </div>

@@ -2,13 +2,21 @@
 @import "../../styles/mixins.scss";
 
 .wrapper {
-  @include flex(column, flex-start, flex-start);
-  width: 50%;
+  @include flex(row, center, center, 0px);
+  height: 100vh;
 
-  &__message {
+  a {
+    margin-top: 80px;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 2.4rem;
+  }
+
+  .wraper__card {
     position: relative;
     padding: 5px 15px;
-    width: 100%;
+    width: 700px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
     border-radius: 6px;
 
@@ -19,10 +27,6 @@
 
     :nth-child(3) {
       color: $grey;
-    }
-
-    h3 {
-      font-size: 1.7rem;
     }
 
     button {
