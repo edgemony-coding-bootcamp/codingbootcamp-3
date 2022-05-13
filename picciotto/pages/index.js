@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import AddNewMessage from "../components/AddNewMessage";
+import Hero from "../components/Hero";
 import MessagesList from "../components/MessagesList";
 import styles from "../styles/Home.module.css";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
+      <Hero />
       <main className={styles.main}>
         <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
         <MessagesList reloadData={reloadData} setReloadData={setReloadData} />

@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.wrapper {
+  @include flex(column, center, center);
+
+  &__hero {
+    @include flex(column, center, center, 0px);
+
+    position: relative;
+    width: 100vw;
+    height: 700px;
+
+    opacity: 1;
+    transition: all 0.15s;
+  }
+
+  &__btns {
+    @include flex(row, center, center, 10px);
+  }
+}
+
+.fade {
+  opacity: 0.3;
+}
